@@ -107,6 +107,7 @@
     pika-backup
     librewolf
     steam
+    lutris
   ];
 
   programs.zsh.enable = true;
