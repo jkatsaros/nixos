@@ -87,6 +87,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kitty
+      steam
     ];
   };
 
