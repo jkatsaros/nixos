@@ -11,18 +11,40 @@
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
+      user = "katsa";
       pkgs = nixpkgs.legacyPackages.${system};
+      allowed-unfree-packages = [
+        "steam"
+        "steam-original"
+        "steam-run"
+      ];
     in {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration.nix ];
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit allowed-unfree-packages user;
+              };
+            }
+          ];
+
+          specialArgs = {
+            inherit allowed-unfree-packages user;
+          };
         };
       };
 
       homeConfigurations = {
         katsa = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = {
+            inherit allowed-unfree-packages user;
+          };
           modules = [ ./home.nix ];
         };
       };

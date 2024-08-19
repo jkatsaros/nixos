@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ allowed-unfree-packages, config, lib, pkgs, ... }:
 
 {
   imports =
@@ -80,6 +80,10 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nixpkgs.config = {
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) allowed-unfree-packages;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.katsa = {
     isNormalUser = true;
@@ -87,7 +91,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kitty
-      steam
     ];
   };
 
