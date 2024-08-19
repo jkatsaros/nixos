@@ -26,6 +26,7 @@
     pkgs.discord
     pkgs.tutanota-desktop
     pkgs.bitwarden-desktop
+    pkgs.signal-desktop
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
