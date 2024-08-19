@@ -103,6 +103,7 @@
   environment.systemPackages = with pkgs; [
     zsh
     git
+    pika-backup
     librewolf
     steam
   ];
