@@ -89,9 +89,7 @@
     isNormalUser = true;
     description = "Jason Katsaros";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kitty
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Install firefox.
