@@ -86,7 +86,7 @@
     description = "Jason Katsaros";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      
+      kitty
     ];
   };
 
