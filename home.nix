@@ -22,11 +22,11 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.steam
     pkgs.discord
     pkgs.tutanota-desktop
     pkgs.bitwarden-desktop
     pkgs.signal-desktop
+    pkgs.kitty
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
