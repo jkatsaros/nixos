@@ -24,6 +24,7 @@
   home.packages = [
     pkgs.steam
     pkgs.discord
+    pkgs.tutanota-desktop
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
