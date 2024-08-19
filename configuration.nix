@@ -90,6 +90,7 @@
     description = "Jason Katsaros";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
@@ -98,9 +99,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    zsh
     git
     steam
   ];
+
+  programs.zsh.enable = true;
 
   programs.steam = {
     enable = true;
