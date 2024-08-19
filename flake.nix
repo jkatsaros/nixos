@@ -18,6 +18,19 @@
         "steam-original"
         "steam-run"
         "discord"
+        "clion"
+        "datagrip"
+        "dataspell"
+        "gateway"
+        "goland"
+        "idea-ultimate"
+        "phpstorm"
+        "pycharm-professional"
+        "rider"
+        "ruby-mine"
+        "rust-rover"
+        "webstorm"
+        "writerside"
       ];
     in {
       nixosConfigurations = {

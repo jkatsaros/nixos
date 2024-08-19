@@ -27,6 +27,19 @@
     pkgs.bitwarden-desktop
     pkgs.signal-desktop
     pkgs.kitty
+    pkgs.jetbrains.clion
+    pkgs.jetbrains.datagrip
+    pkgs.jetbrains.dataspell
+    pkgs.jetbrains.gateway
+    pkgs.jetbrains.goland
+    pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.phpstorm
+    pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.rider
+    pkgs.jetbrains.ruby-mine
+    pkgs.jetbrains.rust-rover
+    pkgs.jetbrains.webstorm
+    pkgs.jetbrains.writerside
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
