@@ -14,6 +14,7 @@
       user = "katsa";
       pkgs = nixpkgs.legacyPackages.${system};
       allowed-unfree-packages = [
+        "graphite-cli"
         "steam"
         "steam-original"
         "steam-run"

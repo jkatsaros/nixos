@@ -103,6 +103,7 @@
   environment.systemPackages = with pkgs; [
     zsh
     git
+    graphite-cli
     pika-backup
     librewolf
     steam
