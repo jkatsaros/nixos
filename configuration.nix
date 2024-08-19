@@ -108,6 +108,7 @@
     librewolf
     steam
     lutris
+    heroic
   ];
 
   programs.zsh.enable = true;
