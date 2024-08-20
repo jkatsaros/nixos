@@ -32,6 +32,7 @@
         "rust-rover"
         "webstorm"
         "writerside"
+        "makemkv"
       ];
     in {
       nixosConfigurations = {

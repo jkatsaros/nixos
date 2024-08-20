@@ -41,6 +41,7 @@
     pkgs.jetbrains.webstorm
     pkgs.jetbrains.writerside
     pkgs.yt-dlp
+    pkgs.makemkv
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
