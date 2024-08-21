@@ -109,6 +109,7 @@
     steam
     lutris
     heroic
+    r2modman
   ];
 
   programs.zsh.enable = true;
