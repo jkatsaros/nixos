@@ -13,7 +13,9 @@
       init.defaultBranch = "main";
       safe.directory = [
         "/home/katsa/.dotfiles"
-        "/home/katsa/Repositories"
+        "/home/katsa/.dotfiles/.git"
+        "/home/katsa/Repositories/*"
+        "/home/katsa/Repositories/*/.git"
       ];
     };
   };
