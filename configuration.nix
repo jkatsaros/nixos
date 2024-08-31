@@ -8,6 +8,9 @@
     ./system/hardware/printing.nix
     ./system/hardware/sound.nix
     ./system/hardware/bluetooth.nix
+    ./system/security/firewall.nix
+    ./system/security/automount.nix
+    ./system/shell/zsh.nix
     ./system/experimental.nix
     ./system/games/games.nix
   ];
@@ -44,6 +47,7 @@
     description = "Jason Katsaros";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
+    shell = pkgs.zsh;
   };
 
   # This value determines the NixOS release from which the default

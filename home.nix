@@ -3,11 +3,11 @@
 {
   imports = [
     ./user/app/git/git.nix
-    ./user/app/shell/zsh.nix
     ./user/app/social/social.nix
     ./user/app/media/media.nix
     ./user/app/utilities/utilities.nix
     ./user/app/terminal/kitty.nix
+    ./user/app/nvim/nvim.nix
     ./user/app/browsers/librewolf.nix
   ];
 
@@ -27,6 +27,10 @@
 
   nixpkgs.config = {
     allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) allowed-unfree-packages;
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
