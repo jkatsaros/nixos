@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     git
+    lazygit
   ];
 
   programs.git = {
@@ -14,6 +15,8 @@
       safe.directory = [
         "/home/katsa/.dotfiles"
         "/home/katsa/.dotfiles/.git"
+        "/home/katsa/.config/nvim"
+        "/home/katsa/.config/nvim/.git"
         "/home/katsa/Repositories/*"
         "/home/katsa/Repositories/*/.git"
       ];

@@ -2,13 +2,20 @@
 
 {
   imports = [
+    ./user/fonts/fonts.nix
     ./user/app/git/git.nix
+    ./user/lang/zig/zig.nix
+    ./user/lang/rust/rust.nix
+    ./user/lang/cc/cc.nix
+    ./user/lang/lua/lua.nix 
+    ./user/lang/go/go.nix
     ./user/app/social/social.nix
     ./user/app/media/media.nix
     ./user/app/utilities/utilities.nix
-    ./user/app/terminal/kitty.nix
+    ./user/app/terminal/terminal.nix
     ./user/app/nvim/nvim.nix
     ./user/app/browsers/librewolf.nix
+    ./user/app/utilities/mucommander.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

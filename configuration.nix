@@ -12,6 +12,7 @@
     ./system/security/automount.nix
     ./system/shell/zsh.nix
     ./system/experimental.nix
+    ./system/fmt.nix
     ./system/games/games.nix
   ];
 
@@ -29,6 +30,7 @@
 
   environment.plasma6.excludePackages = [
     pkgs.kdePackages.konsole
+    pkgs.kdePackages.kate
   ];
 
   # Configure keymap in X11
