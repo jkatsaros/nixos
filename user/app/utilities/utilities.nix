@@ -3,6 +3,7 @@
 {
   imports = [
     ./bitwarden.nix
-    ./gum.nix
+    ./mucommander.nix
+    ./yt-dlp.nix
   ];
 }

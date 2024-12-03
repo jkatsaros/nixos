@@ -1,3 +1,0 @@
-[submodule "nixos-rebuild"]
-	path = nixos-rebuild
-	url = https://github.com/jkatsaros/nixos-rebuild

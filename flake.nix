@@ -2,8 +2,8 @@
   description = "";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -14,24 +14,11 @@
       user = "katsa";
       pkgs = nixpkgs.legacyPackages.${system};
       allowed-unfree-packages = [
-        "graphite-cli"
         "steam"
         "steam-original"
         "steam-run"
+        "steam-unwrapped"
         "discord"
-        "clion"
-        "datagrip"
-        "dataspell"
-        "gateway"
-        "goland"
-        "idea-ultimate"
-        "phpstorm"
-        "pycharm-professional"
-        "rider"
-        "ruby-mine"
-        "rust-rover"
-        "webstorm"
-        "writerside"
         "makemkv"
       ];
     in {

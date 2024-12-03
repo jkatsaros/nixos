@@ -10,9 +10,8 @@
     ./system/hardware/bluetooth.nix
     ./system/security/firewall.nix
     ./system/security/automount.nix
-    ./system/shell/zsh.nix
     ./system/experimental.nix
-    ./system/fmt.nix
+    ./system/development/languages.nix
     ./system/games/games.nix
   ];
 
@@ -28,10 +27,12 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  environment.plasma6.excludePackages = [
-    pkgs.kdePackages.konsole
-    pkgs.kdePackages.kate
-  ];
+  # Enable the KDE Plasma Remote Desktop Environment.
+  services.xrdp.enable = true;
+  services.xrdp.openFirewall = true;
+  services.openssh.enable = true;
+
+  environment.plasma6.excludePackages = [];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -49,7 +50,7 @@
     description = "Jason Katsaros";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   # This value determines the NixOS release from which the default
@@ -59,4 +60,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
 }
