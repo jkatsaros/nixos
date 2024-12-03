@@ -30,7 +30,6 @@
     allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) allowed-unfree-packages;
   };
 
-  home.sessionPath = [ "$HOME/.cargo/bin" ];
   home.sessionVariables = {
     EDITOR = "nvim";
   };

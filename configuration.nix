@@ -12,6 +12,7 @@
     ./system/security/automount.nix
     ./system/experimental.nix
     ./system/development/languages.nix
+    ./system/development/podman.nix
     ./system/games/games.nix
   ];
 
