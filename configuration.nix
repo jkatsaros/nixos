@@ -11,8 +11,9 @@
     ./system/security/firewall.nix
     ./system/security/automount.nix
     ./system/experimental.nix
-    ./system/development/languages.nix
+    ./system/development/git.nix
     ./system/development/podman.nix
+    ./system/development/languages.nix
     ./system/games/games.nix
   ];
 

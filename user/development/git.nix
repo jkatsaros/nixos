@@ -1,11 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    git
-    lazygit
-  ];
-
   programs.git = {
     enable = true;
     userName = "Jason Katsaros";

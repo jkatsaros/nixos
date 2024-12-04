@@ -3,12 +3,12 @@
 {
   imports = [
     ./user/fonts/fonts.nix
-    ./user/app/git/git.nix
+    ./user/development/git.nix
+    ./user/development/terminal.nix
+    ./user/development/nvim.nix
     ./user/app/social/social.nix
     ./user/app/media/media.nix
     ./user/app/utilities/utilities.nix
-    ./user/app/terminal/terminal.nix
-    ./user/app/nvim/nvim.nix
     ./user/app/browsers/browsers.nix
   ];
 
