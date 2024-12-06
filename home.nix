@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./user/fonts/fonts.nix
     ./user/development/git.nix
     ./user/development/terminal.nix
     ./user/development/nvim.nix
